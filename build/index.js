@@ -37,7 +37,7 @@ server.register(postRoutes);
 const port = process.env.PORT || 3000;
 const start = async () => {
     try {
-        await server.listen({ port: 3000 });
+        await server.listen({ host: '0.0.0.0', port: process.env.PORT || 3000 });
         log.success(ck.green(`Server listening on port ${port}`));
     }
     catch (err) {
